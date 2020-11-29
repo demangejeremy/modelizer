@@ -10,7 +10,7 @@
 				/>
 			</v-col>
 
-			<v-col class="mb-2" cols="12">
+			<v-col class="mb-2 mt-6" cols="12">
 				<h1 class="display-2 font-weight-bold mb-3">
 					Welcome to Modelizer
 				</h1>
