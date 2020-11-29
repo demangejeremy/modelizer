@@ -37,6 +37,17 @@
 				></v-textarea>
 			</v-col>
 		</v-row>
+		<v-row class="text-left" v-if="loading">
+			<v-col cols="12" sm="12" md="6">
+				<hr />
+				<v-progress-linear
+					class="mt-3"
+					indeterminate
+					color="black"
+				></v-progress-linear>
+				<p>We are loading model, please wait.</p>
+			</v-col>
+		</v-row>
 		<v-row class="text-left" v-if="results">
 			<v-col cols="12" sm="12" md="6">
 				<hr />
@@ -66,8 +77,10 @@
 
 		methods: {
 			viewResults() {
-				// this.results = "Author - 0.09389";
-				Nantes(this.content);
+				// Loading and results
+				this.loading = true;
+				this.results = Nantes(this.content);
+				this.loading = false;
 			},
 		},
 	};

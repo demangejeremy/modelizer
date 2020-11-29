@@ -2,7 +2,7 @@ const brain = window.brain;
 // const data = require("./data.js");
 
 // create configuration for training
-exports.Nantes = function(text) {
+exports.Nantes = function(test) {
 	const config = {
 		iterations: 100,
 		log: true,
@@ -10,6 +10,7 @@ exports.Nantes = function(text) {
 		layers: [10],
 	};
 
+	// Training data
 	const data = [
 		{ input: "Argon", output: "a" },
 		{ input: "Argentina", output: "a" },
@@ -45,14 +46,14 @@ exports.Nantes = function(text) {
 		{ input: "Cut", output: "c" },
 	];
 
-	// the thing we would test
-	const test = text;
-
+	// Let's go
 	const network = new brain.recurrent.LSTM();
 	network.train(data, config);
 	const output = network.run(test);
-	console.log(`It starts with: ${output}`);
-	return output;
+	const result = output(
+		`Result: ${output} (Go to console for more informations)`
+	);
+	return result;
 };
 
 // nantes("Camille");
