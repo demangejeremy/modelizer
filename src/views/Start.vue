@@ -1,16 +1,15 @@
 <template>
 	<div class="home">
-		<p>En cours...</p>
+		<Start />
 	</div>
 </template>
 
 <script>
-	// @ is an alias to /src
-	// import Modelizer from "@/components/Modelizer.vue";
+	import Start from "@/components/Start.vue";
 
-	// export default {
-	// 	components: {
-	// 		Modelizer,
-	// 	},
-	// };
+	export default {
+		components: {
+			Start,
+		},
+	};
 </script>
