@@ -27,7 +27,7 @@
 		</v-app-bar>
 
 		<v-main>
-			<Modelizer />
+			<router-view />
 		</v-main>
 
 		<v-footer class="font-weight-medium mt-12">
@@ -39,16 +39,25 @@
 	</v-app>
 </template>
 
-<script>
-	import Modelizer from "./components/Modelizer";
+<style lang="scss">
+	#app {
+		font-family: Avenir, Helvetica, Arial, sans-serif;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		text-align: center;
+		color: #2c3e50;
+	}
 
-	export default {
-		components: {
-			Modelizer,
-		},
+	#nav {
+		padding: 30px;
 
-		data: () => ({
-			//
-		}),
-	};
-</script>
+		a {
+			font-weight: bold;
+			color: #2c3e50;
+
+			&.router-link-exact-active {
+				color: #42b983;
+			}
+		}
+	}
+</style>
