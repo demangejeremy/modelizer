@@ -2,9 +2,9 @@ const brain = window.brain;
 // const data = require("./data.js");
 
 // create configuration for training
-exports.Nantes = function(test) {
+exports.Nantes = function(test, it) {
 	const config = {
-		iterations: 100,
+		iterations: it,
 		log: true,
 		logPeriod: 50,
 		layers: [10],
@@ -50,9 +50,7 @@ exports.Nantes = function(test) {
 	const network = new brain.recurrent.LSTM();
 	network.train(data, config);
 	const output = network.run(test);
-	const result = output(
-		`Result: ${output} (Go to console for more informations)`
-	);
+	const result = `Result: ${output} (Go to console for more informations)`;
 	return result;
 };
 

@@ -78,8 +78,9 @@
 		methods: {
 			viewResults() {
 				// Loading and results
+				this.results = null;
 				this.loading = true;
-				this.results = Nantes(this.content);
+				this.results = Nantes(this.content, 500);
 				this.loading = false;
 			},
 		},
