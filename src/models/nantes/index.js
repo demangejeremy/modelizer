@@ -50,7 +50,7 @@ exports.Nantes = function(test, it) {
 	const network = new brain.recurrent.LSTM();
 	network.train(data, config);
 	const output = network.run(test);
-	const result = `Result: ${output} (Go to console for more informations)`;
+	const result = `${output} (Go to console for more informations)`;
 	return result;
 };
 
