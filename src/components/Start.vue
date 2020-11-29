@@ -36,9 +36,16 @@
 				></v-textarea>
 			</v-col>
 		</v-row>
+		<v-row class="text-left" v-if="results">
+			<v-col cols="12" sm="12" md="6">
+				<hr />
+				<h3 class="mt-3">Result</h3>
+				<p>{{ results }}</p>
+			</v-col>
+		</v-row>
 		<v-row class="text-left" v-if="selectedModel">
 			<v-col class="mb-2" cols="12" sm="12" md="6">
-				<v-btn color="red" block dark>Testing model</v-btn>
+				<v-btn color="red" @click="viewResults" block dark>Testing model</v-btn>
 			</v-col>
 		</v-row>
 	</v-container>
@@ -49,8 +56,13 @@
 		data: () => ({
 			models: ["Nantes"],
 			selectedModel: null,
+			results: null,
 		}),
 
-		methods: {},
+		methods: {
+			viewResults() {
+				this.results = "Author - 0.09389";
+			},
+		},
 	};
 </script>
