@@ -1,4 +1,4 @@
-# modelizer
+![Modelizer Logo](https://raw.githubusercontent.com/demangejeremy/modelizer/master/src/assets/Modelizer_transparent.png)
 
 ## Project setup
 ```
