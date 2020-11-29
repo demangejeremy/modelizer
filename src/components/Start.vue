@@ -33,6 +33,7 @@
 					name="input-7-1"
 					label="Your text for testing model"
 					color="black"
+					v-model="content"
 				></v-textarea>
 			</v-col>
 		</v-row>
@@ -52,16 +53,21 @@
 </template>
 
 <script>
+	import { Nantes } from "@/models/nantes/index.js";
+
 	export default {
 		data: () => ({
 			models: ["Nantes"],
 			selectedModel: null,
 			results: null,
+			content: "",
+			loading: false,
 		}),
 
 		methods: {
 			viewResults() {
-				this.results = "Author - 0.09389";
+				// this.results = "Author - 0.09389";
+				Nantes(this.content);
 			},
 		},
 	};
