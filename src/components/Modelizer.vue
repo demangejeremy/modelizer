@@ -20,7 +20,7 @@
 					<br />please join our
 					<a href="https://github.com/demangejeremy/modelizer" target="_blank"
 						>GitHub</a
-					>
+					>.
 				</p>
 			</v-col>
 
