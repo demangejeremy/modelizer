@@ -27,19 +27,24 @@
 		</v-app-bar>
 
 		<v-main>
-			<HelloWorld />
+			<Modelizer />
 		</v-main>
+
+		<v-footer class="font-weight-medium mt-12">
+			<v-col class="text-center" cols="12">
+				{{ new Date().getFullYear() }} —
+				<strong>Jérémy DEMANGE | CY IDHN</strong>
+			</v-col>
+		</v-footer>
 	</v-app>
 </template>
 
 <script>
-	import HelloWorld from "./components/HelloWorld";
+	import Modelizer from "./components/Modelizer";
 
 	export default {
-		name: "App",
-
 		components: {
-			HelloWorld,
+			Modelizer,
 		},
 
 		data: () => ({
