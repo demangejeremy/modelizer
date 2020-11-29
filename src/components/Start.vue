@@ -52,7 +52,7 @@
 			<v-col cols="12" sm="12" md="6">
 				<hr />
 				<h3 class="mt-3">Result</h3>
-				<p>{{ results }}</p>
+				<p v-html="results"></p>
 			</v-col>
 		</v-row>
 		<v-row class="text-left" v-if="selectedModel">
@@ -76,11 +76,11 @@
 		}),
 
 		methods: {
-			viewResults() {
+			async viewResults() {
 				// Loading and results
 				this.results = null;
 				this.loading = true;
-				this.results = Nantes(this.content, 500);
+				this.results = await Nantes(this.content);
 				this.loading = false;
 			},
 		},
